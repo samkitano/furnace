@@ -1,6 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/js/base.js": "/js/base.js",
     "/js/users.js": "/js/users.js",
     "/js/dt.js": "/js/dt.js",
     "/js/pdfmake.js": "/js/pdfmake.js",

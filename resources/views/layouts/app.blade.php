@@ -30,8 +30,10 @@
     <div id="app">
         @include('components.topnav')
 
-        <div class="container">
+        <div class="container-fluid content">
             <div class="row justify-content-between align-content-center mt-4 px-3">
+                @include('components.sidebar')
+
                 @include('components.logo')
 
                 @include('components.alerts')
@@ -44,6 +46,8 @@
             </div>
         </div>
     </div>
+
+    <script src="{{ asset('js/base.js') }}"></script>
     @yield('scripts')
 </body>
 </html>

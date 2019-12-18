@@ -1,40 +1,34 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+    <div class="container-fluid">
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navContent"
+                aria-controls="navContent"
+                aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="open-menu" href="#" role="button">
+            <i class="mdi mdi-arrow-expand-right"></i>
+        </a>
+
+        <div class="collapse navbar-collapse" id="navContent">
             <!-- Left Side Of Navbar -->
+{{--
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('Admin::users.index') }}">Users</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Suppliers</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Customers</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Estimates</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Orders</a>
-                </li>
-
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Tables
-                    </a>
+                    <a
+                        class="nav-link dropdown-toggle  hasTooltip"
+                        title="Tables"
+                        href="#" id="navbarDropdown"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                    ><i class="mdi mdi-table-large"></i></a>
+
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Families</a>
                         <a class="dropdown-item" href="#">Categories</a>
@@ -46,9 +40,58 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Mapping</a>
+                    <a
+                        class="nav-link hasTooltip"
+                        title="Users"
+                        href="{{ route('Admin::users.index') }}"
+                    ><i class="mdi mdi-account-multiple"></i></a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link hasTooltip"
+                        title="Suppliers"
+                        href="#"
+                    ><i class="mdi mdi-truck"></i></a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link hasTooltip"
+                        title="Customers"
+                        href="#"><i class="mdi mdi-human-male-female"></i></a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link hasTooltip"
+                        title="Products"
+                        href="#"><i class="mdi mdi-tag"></i></a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link hasTooltip"
+                        title="Estimates"
+                        href="#"><i class="mdi mdi-square-inc-cash"></i></a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link hasTooltip"
+                        title="Orders"
+                        href="#"><i class="mdi mdi-factory"></i></a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link hasTooltip"
+                        title="Mapping"
+                        href="#"
+                    ><i class="mdi mdi-pen"></i></a>
                 </li>
             </ul>
+--}}
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
