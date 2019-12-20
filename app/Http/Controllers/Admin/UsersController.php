@@ -8,6 +8,21 @@ use App\Http\Controllers\Controller;
 
 class UsersController extends Controller
 {
+    /** @var string */
+    protected $resource = 'users';
+    protected $single = 'User';
+
+    /** @var array */
+    protected $icons = [
+        'index' => 'mdi mdi-account-multiple',
+        'create' => 'mdi mdi-account-plus',
+    ];
+    protected $fields = [
+        'name' => 'Name',
+        'email' => 'Email',
+        'created_at' => 'Since',
+    ];
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +30,13 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view('admin.users.index', ['users' => User::all()]);
+        return view('admin.resource.index', [
+            'data' => User::all(),
+            'resource' => $this->resource,
+            'single' => $this->single,
+            'icons' => $this->icons,
+            'fields' => $this->fields,
+        ]);
     }
 
     /**
@@ -25,7 +46,13 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('admin.users.create');
+        return view('admin.resource.create', [
+            'data' => User::all(),
+            'resource' => $this->resource,
+            'single' => $this->single,
+            'icons' => $this->icons,
+            'fields' => $this->fields,
+        ]);
     }
 
     /**
@@ -47,7 +74,13 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        return view('admin.users.edit', ['id' => $id]);
+        return view('admin.resource.edit', [
+            'data' => User::all(),
+            'resource' => $this->resource,
+            'single' => $this->single,
+            'icons' => $this->icons,
+            'fields' => $this->fields,
+        ]);
     }
 
     /**
@@ -58,7 +91,13 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.users.edit', ['id' => $id]);
+        return view('admin.resource.edit', [
+            'data' => User::all(),
+            'resource' => $this->resource,
+            'single' => $this->single,
+            'icons' => $this->icons,
+            'fields' => $this->fields,
+        ]);
     }
 
     /**

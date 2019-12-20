@@ -18,7 +18,7 @@
             ><i class="mdi mdi-table-large"></i></a>
 
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Families</a>
+                <a class="dropdown-item" href="{{ route('Admin::families.index') }}">Families</a>
                 <a class="dropdown-item" href="#">Categories</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">VAT</a>

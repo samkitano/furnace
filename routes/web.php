@@ -31,4 +31,10 @@ Route::group([
     'middleware' => 'auth',
 ], function () {
     Route::resource('/users', 'Admin\\UsersController');
+    Route::group([
+        'prefix'     => 'tables',
+    ], function () {
+        Route::resource('/families', 'Admin\\FamiliesController');
+    });
+
 });
