@@ -13,6 +13,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Title query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Title newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Title newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Title whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Title whereName($value)
  */
 class Title extends Model
 {

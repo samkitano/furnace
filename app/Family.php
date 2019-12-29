@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 /**
  * App\Family
  *
- * @mixin \Eloquent
  * @property int $id
  * @property string $name
  * @property string $description
@@ -19,6 +18,12 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Family query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Family newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Family newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Family whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Family whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Family whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Family whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Family whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 class Family extends Model
 {

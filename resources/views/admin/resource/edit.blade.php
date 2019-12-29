@@ -9,6 +9,7 @@
 
             <div class="card-body">
                 Edit {{ $id }}
+               {{-- <input type="hidden" name="ignore[id]" value="{{ $data->id }}"> --}}
             </div>
         </div>
     </div>

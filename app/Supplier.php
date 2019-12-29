@@ -25,6 +25,17 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Supplier newQuery()
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Salesman[] $salesmen
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Supplier newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Supplier whereAddress($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Supplier whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Supplier whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Supplier whereFax($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Supplier whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Supplier whereMobile($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Supplier whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Supplier whereNif($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Supplier wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Supplier whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Supplier whereWeb($value)
  */
 class Supplier extends Model
 {

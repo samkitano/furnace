@@ -19,6 +19,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\OrderProduct query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\OrderProduct newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\OrderProduct newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\OrderProduct whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\OrderProduct whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\OrderProduct whereOrderId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\OrderProduct whereProductId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\OrderProduct whereQuantity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\OrderProduct whereUpdatedAt($value)
  */
 class OrderProduct extends Model
 {

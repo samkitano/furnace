@@ -20,6 +20,15 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Salesman query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Salesman newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Salesman newModelQuery()
+ * @property string $name
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Salesman whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Salesman whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Salesman whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Salesman whereMobile($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Salesman whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Salesman whereNotes($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Salesman whereSupplierId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Salesman whereUpdatedAt($value)
  */
 class Salesman extends Model
 {

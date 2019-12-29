@@ -18,6 +18,13 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Price query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Price newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Price newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Price whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Price whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Price wherePrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Price whereProductId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Price whereSupplierId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Price whereUnit($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Price whereUpdatedAt($value)
  */
 class Price extends Model
 {

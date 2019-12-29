@@ -35,6 +35,25 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Order newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Order newModelQuery()
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Product[] $products
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereAddress($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereCity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereNameOnCard($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereNotes($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereProvince($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereShipment($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereShipped($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereTax($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereTotal($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereUntaxed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereVat($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Order whereZip($value)
  */
 class Order extends Model
 {

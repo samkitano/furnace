@@ -15,6 +15,10 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Vat query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Vat newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Vat newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Vat whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Vat whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Vat whereTax($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Vat whereUpdatedAt($value)
  */
 class Vat extends Model
 {

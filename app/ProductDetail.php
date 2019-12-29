@@ -23,6 +23,16 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\ProductDetail query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\ProductDetail newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\ProductDetail newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ProductDetail whereColor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ProductDetail whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ProductDetail whereFeature($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ProductDetail whereH($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ProductDetail whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ProductDetail whereL($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ProductDetail whereProductId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ProductDetail whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ProductDetail whereW($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ProductDetail whereWeight($value)
  */
 class ProductDetail extends Model
 {

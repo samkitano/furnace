@@ -24,6 +24,17 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\EstimateMap query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\EstimateMap newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\EstimateMap newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\EstimateMap whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\EstimateMap whereH($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\EstimateMap whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\EstimateMap whereL($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\EstimateMap whereOrderId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\EstimateMap wherePrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\EstimateMap whereProductId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\EstimateMap whereQuantity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\EstimateMap whereUnit($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\EstimateMap whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\EstimateMap whereW($value)
  */
 class EstimateMap extends Model
 {

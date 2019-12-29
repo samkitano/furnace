@@ -24,6 +24,16 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Customer query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Customer newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Customer newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Customer whereAddress($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Customer whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Customer whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Customer whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Customer whereMobile($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Customer whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Customer whereNotes($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Customer whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Customer whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Customer whereZip($value)
  */
 class Customer extends Model
 {

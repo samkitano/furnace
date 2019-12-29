@@ -27,6 +27,19 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Estimate query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Estimate newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Estimate newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Estimate whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Estimate whereCustomerId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Estimate whereDeadline($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Estimate whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Estimate whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Estimate whereNotes($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Estimate whereShipping($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Estimate whereTax($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Estimate whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Estimate whereTotal($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Estimate whereUntaxed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Estimate whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Estimate whereVat($value)
  */
 class Estimate extends Model
 {

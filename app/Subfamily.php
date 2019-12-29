@@ -18,6 +18,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Subfamily query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Subfamily newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Subfamily newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Subfamily whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Subfamily whereFamilyId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Subfamily whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Subfamily whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Subfamily whereUpdatedAt($value)
  */
 class Subfamily extends Model
 {

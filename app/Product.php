@@ -29,6 +29,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|\App\Product withTrashed()
  * @method static \Illuminate\Database\Query\Builder|\App\Product withoutTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Product newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereRef($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereSubfamilyId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereUpdatedAt($value)
  */
 class Product extends Model
 {

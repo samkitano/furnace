@@ -14,6 +14,9 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Unit query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Unit newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Unit newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Unit whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Unit whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Unit whereName($value)
  */
 class Unit extends Model
 {

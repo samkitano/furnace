@@ -21,6 +21,16 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User newModelQuery()
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
+ * @property \Illuminate\Support\Carbon|null $email_verified_at
+ * @property string|null $remember_token
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereEmailVerifiedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User wherePassword($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRememberToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereUpdatedAt($value)
  */
 class User extends Authenticatable
 {
