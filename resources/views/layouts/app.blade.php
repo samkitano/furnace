@@ -10,12 +10,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/dt.js') }}"></script>
-    <script src="{{ asset('js/pdfmake.js') }}"></script>
-    <script src="{{ asset('js/vf_fonts.js') }}"></script>
-    <script src="{{ asset('js/popper.js') }}"></script>
-    <script src="{{ asset('js/bs.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    @include('layouts.head-scripts')
+
+    @stack('preScripts')
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -47,7 +44,8 @@
         </div>
     </div>
 
-    <script src="{{ asset('js/base.js') }}"></script>
-    @yield('scripts')
+    @include('layouts.post-scripts')
+
+    @stack('postScripts')
 </body>
 </html>
