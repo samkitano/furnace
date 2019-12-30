@@ -1,4 +1,4 @@
-<div class="flex-grow-1" style="min-height:68px">
+<div class="main-alerts flex-grow-1" style="min-height:68px">
     @if (session('status') && count(session('status')))
         <div class="alert alert-dismissible alert-{{ session('status')['type'] }} {{ session('status')['icon'] }}"
              role="alert">
