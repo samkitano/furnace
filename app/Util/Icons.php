@@ -15,4 +15,5 @@ class Icons
     const _ICON_EDIT_ = 'mdi mdi-magnify';
     const _ICON_FAMILIES_ = 'mdi mdi-source-branch';
     const _ICON_TABLE_ = 'mdi mdi-table-large';
+    const _ICON_TRASH_ = 'mdi mdi-trash-can-outline';
 }
