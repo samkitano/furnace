@@ -124,6 +124,8 @@ class FamiliesController extends Controller
      */
     public function edit($id)
     {
+        Notifier::notifyInfo("Campos com * são obrigatórios.");
+
         $data = Family::find($id);
 
         return view('admin.resource.edit', [
