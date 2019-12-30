@@ -44,7 +44,7 @@
                         <div class="col-12">
                             <button type="submit"
                                     title="Click to create resource"
-                                    class="hasTooltip btn btn-primary float-right">Create</button>
+                                    class="hasTooltip btn btn-submit btn-primary float-right">Create</button>
                         </div>
                     </div>
                 </div>
@@ -53,5 +53,5 @@
     </div>
 @endsection
 
-@section('scripts')
-@endsection
+@push('scripts')
+@endpush
