@@ -39,6 +39,7 @@
                         @endif
                     @endforeach
 
+                    {{-- TODO: check validation RULE--}}
                     {{--Edit {{ $id }}--}}
                    {{-- <input type="hidden" name="ignore[id]" value="{{ $data->id }}"> --}}
                 </div>
