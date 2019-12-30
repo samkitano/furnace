@@ -34,10 +34,16 @@
                                     @endif
                                 @endforeach
 
-                                <td><a href="{{ route("Admin::{$resource}.edit", $datum->id) }}"
-                                       class="btn btn-xs btn-primary hasTooltip"
+                                <td>
+                                    <a href="{{ route("Admin::{$resource}.edit", $datum->id) }}"
+                                       class="btn btn-edit btn-xs btn-primary hasTooltip"
                                        title="Edit {{ $single }}"
                                     ><i class="{{ \App\Util\Icons::_ICON_EDIT_ }}"></i></a>
+
+                                    <button class="btn btn-delete btn-xs btn-danger hasTooltip"
+                                            title="Delete {{ $single }}"
+                                            data-id="{{ $datum->id }}"
+                                    ><i class="{{ \App\Util\Icons::_ICON_TRASH_ }}"></i></button>
                                 </td>
                             </tr>
                         @endforeach
@@ -48,6 +54,6 @@
     </div>
 @endsection
 
-@section('scripts')
+@push('postScripts')
     <script src="{{ asset("js/{$resource}.js") }}"></script>
-@endsection
+@endpush
