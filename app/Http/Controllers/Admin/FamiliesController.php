@@ -51,12 +51,15 @@ class FamiliesController extends Controller
      */
     public function index()
     {
+        $dt = '{"columnDefs":[{"targets": 3,"orderable": false}]}';
+
         return view('admin.resource.index', [
             'data' => Family::all(),
             'resource' => $this->resource,
             'single' => $this->single,
             'icon' => $this->icon,
             'fields' => $this->fields,
+            'dt' => $dt,
         ]);
     }
 
@@ -167,6 +170,10 @@ class FamiliesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Family::destroy($id);
+
+        Notifier::notifySuccess("Family #{$id} deleted!");
+
+        return redirect()->route('Admin::families.index');
     }
 }
