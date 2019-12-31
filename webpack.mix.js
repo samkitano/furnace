@@ -13,8 +13,6 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
    .js('resources/js/base.js', 'public/js')
-   .js('resources/js/users.js', 'public/js')
-   .js('resources/js/families.js', 'public/js')
    .copy('resources/js/vendor/datatables.min.js', 'public/js/dt.js')
    .copy('resources/js/vendor/pdfmake.min.js', 'public/js/pdfmake.js')
    .copy('resources/js/vendor/vfs_fonts.js', 'public/js/vf_fonts.js')
