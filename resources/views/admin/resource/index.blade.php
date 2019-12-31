@@ -12,7 +12,7 @@
             </div>
 
             <div class="card-body">
-                <table class="main_dt table-striped" style="width:100%">
+                <table class="dt table-striped" style="width:100%">
                     <thead>
                         <tr>
                             @foreach($fields as $field)
@@ -41,8 +41,14 @@
                                     ><i class="{{ \App\Util\Icons::_ICON_EDIT_ }}"></i></a>
 
                                     <button class="btn btn-delete btn-xs btn-danger hasTooltip"
+                                            type="button"
                                             title="Delete {{ $single }}"
+                                            data-toggle="modal"
+                                            data-target="#deleteModal"
+                                            data-name="{{ $datum['name'] ?? '' }}"
                                             data-id="{{ $datum->id }}"
+                                            data-single="{{ $single }}"
+                                            data-route="{{ route("Admin::{$resource}.destroy", $datum->id) }}"
                                     ><i class="{{ \App\Util\Icons::_ICON_TRASH_ }}"></i></button>
                                 </td>
                             </tr>
@@ -52,8 +58,15 @@
             </div>
         </div>
     </div>
+
+    @include('admin.modals.delete-modal')
 @endsection
 
 @push('postScripts')
-    <script src="{{ asset("js/{$resource}.js") }}"></script>
+    <script type="text/javascript">
+        const dtOptions = JSON.parse(@json($dt))
+
+        appUtil.loadDT(dtOptions)
+               .watchDelete()
+    </script>
 @endpush
