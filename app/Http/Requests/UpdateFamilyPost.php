@@ -25,7 +25,7 @@ class UpdateFamilyPost extends FormRequest
     public function rules()
     {
         return [
-            'name' => "required|max:255|min:3|unique:families,name,{$this->route('id')}",
+            'name' => "required|max:255|min:3|unique:families,name,{$this->route('family')}",
             'description' => 'nullable|max:255',
         ];
     }
