@@ -57,4 +57,12 @@ trait Notifier
     {
         static::notify('info', $message, Icons::_ICON_INFO_);
     }
+
+    /**
+     * @return void
+     */
+    public static function notifyRequired()
+    {
+        static::notify('info', 'All fields marked with * are required.', Icons::_ICON_INFO_);
+    }
 }
