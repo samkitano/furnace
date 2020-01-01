@@ -8,24 +8,32 @@ use App\Util\DB\TableAnalyzer;
 use App\Http\Requests\StoreFamily;
 use App\Util\Notifications\Notifier;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\UpdateFamilyPost;
+use App\Http\Requests\UpdateFamily;
 
 class FamiliesController extends Controller
 {
     /** @var \App\Util\DB\TableAnalyzer */
     protected $analyzer;
 
+    /** @var \App\Family */
+    protected $model;
+
     /** @var string */
     protected $single = 'Family';
     protected $resource = 'families';
     protected $icon = Icons::_ICON_FAMILIES_;
+    protected $dtDefs = '{"columnDefs":[{"targets": 3,"orderable": false}]}';
 
     /** @var array */
     protected $fields = [];
 
+    /**
+     * FamiliesController constructor.
+     */
     public function __construct()
     {
-        $this->analyzer = new TableAnalyzer(new Family());
+        $this->model = new Family();
+        $this->analyzer = new TableAnalyzer($this->model);
         $this->fields = $this->analyzer->describe();
     }
 
@@ -36,15 +44,13 @@ class FamiliesController extends Controller
      */
     public function index()
     {
-        $dt = '{"columnDefs":[{"targets": 3,"orderable": false}]}';
-
         return view('admin.resource.index', [
-            'data' => Family::all(),
+            'data' => $this->model->all(),
             'resource' => $this->resource,
             'single' => $this->single,
             'icon' => $this->icon,
             'fields' => $this->fields,
-            'dt' => $dt,
+            'dt' => $this->dtDefs,
         ]);
     }
 
@@ -55,10 +61,10 @@ class FamiliesController extends Controller
      */
     public function create()
     {
-        Notifier::notifyInfo("Campos com * são obrigatórios.");
+        Notifier::notifyRequired();
 
         return view('admin.resource.create', [
-            'data' => Family::all(),
+            'data' => null,
             'resource' => $this->resource,
             'single' => $this->single,
             'icon' => $this->icon,
@@ -77,11 +83,15 @@ class FamiliesController extends Controller
     {
         $validatedData = $request->validated();
 
-        $record = Family::create($validatedData);
+        $record = $this->model->create($validatedData);
 
-        Notifier::notifySuccess("Family «{$record->name}» created!");
+        if (isset($record->name)) {
+            Notifier::notifySuccess("{$this->single} «{$record->name}» created!");
+        } else {
+            Notifier::notifySuccess("{$this->single} #{$record->id} created!");
+        }
 
-        return redirect()->route('Admin::families.index');
+        return redirect()->route("Admin::{$this->resource}.index");
     }
 
     /**
@@ -94,7 +104,7 @@ class FamiliesController extends Controller
     public function show($id)
     {
         return view('admin.resource.edit', [
-            'data' => Family::find($id),
+            'data' => $this->model->find($id),
             'resource' => $this->resource,
             'single' => $this->single,
             'icon' => $this->icon,
@@ -112,9 +122,9 @@ class FamiliesController extends Controller
      */
     public function edit($id)
     {
-        Notifier::notifyInfo("Campos com * são obrigatórios.");
+        Notifier::notifyRequired();
 
-        $data = Family::find($id);
+        $data = $this->model->find($id);
 
         return view('admin.resource.edit', [
             'data' => $data,
@@ -129,21 +139,21 @@ class FamiliesController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \App\Http\Requests\UpdateFamilyPost|\Illuminate\Http\Request $request
+     * @param \App\Http\Requests\UpdateFamily|\Illuminate\Http\Request $request
      * @param  int $id
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(UpdateFamilyPost $request, $id)
+    public function update(UpdateFamily $request, $id)
     {
         $validatedData = $request->validated();
 
-        $record = Family::find($id);
+        $record = $this->model->find($id);
         $record->update($validatedData);
 
-        Notifier::notifySuccess("Family «{$record->name}» updated!");
+        Notifier::notifySuccess("{$this->single} «{$record->name}» updated!");
 
-        return redirect()->route('Admin::families.index');
+        return redirect()->route("Admin::{$this->resource}.index");
     }
 
     /**
@@ -155,10 +165,10 @@ class FamiliesController extends Controller
      */
     public function destroy($id)
     {
-        Family::destroy($id);
+        $this->model->destroy($id);
 
-        Notifier::notifySuccess("Family #{$id} deleted!");
+        Notifier::notifySuccess("{$this->single} #{$id} deleted!");
 
-        return redirect()->route('Admin::families.index');
+        return redirect()->route("Admin::{$this->resource}.index");
     }
 }
