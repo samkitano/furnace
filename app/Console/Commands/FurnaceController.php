@@ -136,7 +136,7 @@ class FurnaceController extends Command
         $model = $this->files->get($modelPath);
         $stub = $this->files->get(__DIR__ . '/stubs/model-variables.stub');
 
-        $model = str_replace('{', $stub, $model);
+        $model = str_replace("Model" . PHP_EOL . "{", $stub, $model);
 
         $this->files->put($modelPath, $model);
 
@@ -160,6 +160,11 @@ class FurnaceController extends Command
         return $this;
     }
 
+    /**
+     * Update the Request classes
+     *
+     * @return $this
+     */
     protected function updateRequests()
     {
         $requestStorePath = $this->getAppNamespace() . 'Http\\Requests\\' . "Store{$this->baseName}" . '.php';
@@ -168,11 +173,27 @@ class FurnaceController extends Command
         $requestUpdate = $this->files->get($requestUpdatePath);
         $use = 'use Illuminate\Support\Facades\Auth;' . PHP_EOL . 'use Illuminate\Foundation\Http\FormRequest;';
 
-        $requestStore = str_replace('use Illuminate\Foundation\Http\FormRequest;', $use, $requestStore);
-        $requestStore = str_replace('return false;', 'return Auth::check();', $requestStore);
+        $requestStore = str_replace(
+            'use Illuminate\Foundation\Http\FormRequest;',
+            $use,
+            $requestStore
+        );
+        $requestStore = str_replace(
+            'return false;',
+            'return Auth::check();',
+            $requestStore
+        );
 
-        $requestUpdate = str_replace('use Illuminate\Foundation\Http\FormRequest;', $use, $requestUpdate);
-        $requestUpdate = str_replace('return false;', 'return Auth::check();', $requestUpdate);
+        $requestUpdate = str_replace(
+            'use Illuminate\Foundation\Http\FormRequest;',
+            $use,
+            $requestUpdate
+        );
+        $requestUpdate = str_replace(
+            'return false;',
+            'return Auth::check();',
+            $requestUpdate
+        );
 
         $this->files->put($requestStorePath, $requestStore);
         $this->info('Store Request updated!');
