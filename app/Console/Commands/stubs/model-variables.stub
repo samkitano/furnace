@@ -1,0 +1,24 @@
+{
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        //
+    ];
+
+    /**
+     * The attributes we want to describe for form abstraction
+     *
+     * @var array
+     */
+    public $indexable = [
+        //
+    ];
+    public $editable = [
+        //,
+    ];
+    public $creatable = [
+        //
+    ];
