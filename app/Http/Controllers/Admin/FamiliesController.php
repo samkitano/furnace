@@ -6,9 +6,9 @@ use App\Family;
 use App\Util\Icons;
 use App\Util\DB\TableAnalyzer;
 use App\Http\Requests\StoreFamily;
+use App\Http\Requests\UpdateFamily;
 use App\Util\Notifications\Notifier;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\UpdateFamily;
 
 class FamiliesController extends Controller
 {
