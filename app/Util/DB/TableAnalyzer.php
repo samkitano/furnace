@@ -185,7 +185,7 @@ class TableAnalyzer
             case 'datetime':
                 return 'datetime-local';
             case 'timestamp':
-                return 'string';
+                return 'text';
             case 'date':
                 return 'date';
             case 'time':
