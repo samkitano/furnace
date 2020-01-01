@@ -32,13 +32,15 @@ class SubfamiliesController extends Controller
      */
     public function index()
     {
+        $dt = str_replace('3,', '2,', $this->dtDefs);
+
         return view('admin.resource.index', [
             'data' => $this->model->all(),
             'resource' => $this->resource,
             'single' => $this->single,
             'icon' => $this->icon,
             'fields' => $this->fields,
-            'dt' => $this->dtDefs,
+            'dt' => $dt,
         ]);
     }
 
