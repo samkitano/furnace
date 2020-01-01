@@ -190,6 +190,8 @@ class TableAnalyzer
                 return 'date';
             case 'time':
                 return 'time';
+            case 'enum':
+                return 'select';
             default:
                 return 'text';
         }
