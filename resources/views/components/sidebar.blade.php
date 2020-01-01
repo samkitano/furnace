@@ -19,7 +19,7 @@
 
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{{ route('Admin::families.index') }}">Families</a>
-                <a class="dropdown-item" href="#">Categories</a>
+                <a class="dropdown-item" href="{{ route('Admin::subfamilies.index') }}">Subfamilies</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">VAT</a>
                 <a class="dropdown-item" href="#">Units</a>
