@@ -36,6 +36,12 @@ class Family extends Model
         'name',
         'description',
     ];
+
+    /**
+     * The attributes we want to describe for form abstraction
+     *
+     * @var array
+     */
     public $indexable = [
         'name',
         'description',
