@@ -12,21 +12,6 @@ use App\Http\Controllers\Controller;
 
 class FamiliesController extends Controller
 {
-    /** @var \App\Util\DB\TableAnalyzer */
-    protected $analyzer;
-
-    /** @var \App\Family */
-    protected $model;
-
-    /** @var string */
-    protected $single = 'Family';
-    protected $resource = 'families';
-    protected $icon = Icons::_ICON_FAMILIES_;
-    protected $dtDefs = '{"columnDefs":[{"targets": 3,"orderable": false}]}';
-
-    /** @var array */
-    protected $fields = [];
-
     /**
      * FamiliesController constructor.
      */
@@ -35,6 +20,9 @@ class FamiliesController extends Controller
         $this->model = new Family();
         $this->analyzer = new TableAnalyzer($this->model);
         $this->fields = $this->analyzer->describe();
+        $this->single = 'Family';
+        $this->resource = 'families';
+        $this->icon = Icons::_ICON_FAMILY_;
     }
 
     /**
