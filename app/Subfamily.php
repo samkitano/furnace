@@ -37,6 +37,22 @@ class Subfamily extends Model
     ];
 
     /**
+     * The attributes we want to describe for form abstraction
+     *
+     * @var array
+     */
+    public $indexable = [
+        'name',
+        'created_at',
+    ];
+    public $editable = [
+        'name'
+    ];
+    public $creatable = [
+        'name'
+    ];
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function family(): BelongsTo
