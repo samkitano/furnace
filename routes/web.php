@@ -35,6 +35,7 @@ Route::group([
         'prefix'     => 'tables',
     ], function () {
         Route::resource('/families', 'Admin\\FamiliesController');
+        Route::resource('/subfamilies', 'Admin\\SubfamiliesController');
     });
 
 });
