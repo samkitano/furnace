@@ -3,46 +3,31 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Family;
-use App\Http\Requests\StoreFamily;
-use App\Http\Requests\UpdateFamilyPost;
 use App\Util\Icons;
+use App\Util\DB\TableAnalyzer;
+use App\Http\Requests\StoreFamily;
 use App\Util\Notifications\Notifier;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UpdateFamilyPost;
 
 class FamiliesController extends Controller
 {
+    /** @var \App\Util\DB\TableAnalyzer */
+    protected $analyzer;
+
     /** @var string */
     protected $single = 'Family';
     protected $resource = 'families';
     protected $icon = Icons::_ICON_FAMILIES_;
 
     /** @var array */
-    protected $fields = [
-        'name' => [
-            'label' => 'Name',
-            'type' => 'text',
-            'required' => true,
-            'indexable' => true,
-            'creatable' => true,
-            'editable' => true,
-        ],
-        'description' => [
-            'label' => 'Description',
-            'type' => 'text',
-            'required' => false,
-            'indexable' => true,
-            'creatable' => true,
-            'editable' => true
-        ],
-        'created_at' => [
-            'label' => 'Created',
-            'type' => 'date_time',
-            'required' => false,
-            'indexable' => true,
-            'creatable' => false,
-            'editable' => false
-        ],
-    ];
+    protected $fields = [];
+
+    public function __construct()
+    {
+        $this->analyzer = new TableAnalyzer(new Family());
+        $this->fields = $this->analyzer->describe();
+    }
 
     /**
      * Display a listing of the resource.
