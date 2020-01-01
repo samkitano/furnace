@@ -36,6 +36,19 @@ class Family extends Model
         'name',
         'description',
     ];
+    public $indexable = [
+        'name',
+        'description',
+        'created_at'
+    ];
+    public $editable = [
+        'name',
+        'description',
+    ];
+    public $creatable = [
+        'name',
+        'description',
+    ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
